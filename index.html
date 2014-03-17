@@ -69,13 +69,15 @@ $ git checkout gh-pages
     </div>
 
     
-<script src="http://cdn.socket.io/stable/socket.io.js"></script>
+
+  </body>
+  <script src="http://cdn.socket.io/stable/socket.io.js"></script>
 <scirpt>
+ console.log(123);
   var socket = io.connect('http://localhost:3000');
   socket.on('news', function (data) {
     console.log(data);
     socket.emit('my other event', { my: 'data' });
   });
 </scirpt>
-  </body>
 </html>
