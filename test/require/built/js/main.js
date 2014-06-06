@@ -1,0 +1,1 @@
+define("module/a",[],function(){var e={print:function(){console.log("this is a.js")}};return e}),define("module/b",[],function(){var e={print:function(){console.log("this is b.js")}};return e}),define("module/c",["./a","./b"],function(e,t){var n={};return e.print(),t.print(),n}),requirejs.config({baseUrl:"../js"}),require(["module/c"]),define("main",function(){});
