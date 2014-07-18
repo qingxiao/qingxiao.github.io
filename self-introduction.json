@@ -14,7 +14,8 @@
         "language":"html, css, javascript, less, nodejs",
         "library":"jquery, requirejs, backbone, bootstrap ...",
         "software":"firework, webstrom, browser, firebug ...",
-        "vcs":"git, svn"
+        "vcs":"git, svn",
+        "other":"c++, java, ruby, php",
     },
     "education":{
         "college":"湖南工程学院",
