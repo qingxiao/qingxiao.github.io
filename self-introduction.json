@@ -1,25 +1,25 @@
-var me = {
-    basicInfo:{
-        name:"肖清",
-        birth:"1988-07",
-        sex:"male",
-        email:"350932784@qq.com" || "350932784@163.com",
-        tel:18608590721,
-        experience:"4 years"
+{
+    "basicInfo":{
+        "name":"肖清",
+        "birth":"1988-07",
+        "sex":"male",
+        "email":"350932784@qq.com" || "350932784@163.com",
+        "tel":18608590721,
+        "experience":"4 years"
     },
    
-    developer:"Front End Engineer",
+    "developer":"Front End Engineer",
     
-    skills:{
-        language:"html, css, javascript, less, nodejs",
-        library:"jquery, requirejs, backbone ...",
-        software:"firework, webstrom, browser, firebug ...",
-        vcs:"git, svn"
+    "skills":{
+        "language":"html, css, javascript, less, nodejs",
+        "library":"jquery, requirejs, backbone ...",
+        "software":"firework, webstrom, browser, firebug ...",
+        "vcs":"git, svn"
     },
-    education:{
-        college:"湖南工程学院",
-        professional:"信息与计算科学",
-        date:"2006-09-01 to 2010-06-30"
+    "education":{
+        "college":"湖南工程学院",
+        "professional":"信息与计算科学",
+        "date":"2006-09-01 to 2010-06-30"
     }
     
 };
