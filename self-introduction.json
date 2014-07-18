@@ -12,7 +12,7 @@
     
     "skills":{
         "language":"html, css, javascript, less, nodejs",
-        "library":"jquery, requirejs, backbone ...",
+        "library":"jquery, requirejs, backbone, bootstrap ...",
         "software":"firework, webstrom, browser, firebug ...",
         "vcs":"git, svn"
     },
