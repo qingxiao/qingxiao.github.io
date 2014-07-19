@@ -1,5 +1,13 @@
+.hidden{
+    display: none;
+}
+
 .main-content{}
 .main-content .resume-code{
     width:1024px;
     margin:0 auto;
+}
+#editor {
+  height:500px;
+
 }
