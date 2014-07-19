@@ -2,6 +2,7 @@ define(["ace/ace"] ,function(ace){
     var page = {
         init:function(){
             this.getResumeCode();
+            this.initAceEditor();
         },
         getResumeCode:function(){
             var _this = this;
@@ -10,27 +11,33 @@ define(["ace/ace"] ,function(ace){
                 url:"self-introduction.json",
                 dataType:"html",
                 success:function(res){
-                    _this.initAceEditor(res);
+                    _this.insertCode(res);
                 }
             });
         },
-        initAceEditor:function(code){
+        initAceEditor:function() {
             var editor = ace.edit("editor");
             editor.setTheme("ace/theme/monokai");
             editor.getSession().setMode("ace/mode/json");
-            var length = code.length,
+            this.editor = editor;
+        },
+        insertCode:function(code){
+            var editor = this.editor;
+            //换行作为分隔符产生数组
+            var lines = code.split(/\r\n/),
+                max = lines.length-1,
                 count = 0;
-
             var timeID = setInterval(function(){
-                if(count>=length){
+                if(count>=max){
                     clearInterval(timeID);
+
                 }
-                var c = code[count];
-                if(c != " " && c != "\r"){
-                    editor.insert(code[count]);
-                }
+                //插入一行后加入换行符
+                editor.insert(lines[count]+"\r\n");
+                editor.setHighlightActiveLine(true);
+                editor.focus();
                 count++;
-            }, 20);
+            }, 80);
         }
     };
     page.init();
