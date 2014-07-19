@@ -24,7 +24,7 @@ define(["ace/ace"] ,function(ace){
         insertCode:function(code){
             var editor = this.editor;
             //换行作为分隔符产生数组
-            var lines = code.split(/\r\n/),
+            var lines = code.split(/\n/),
                 max = lines.length-1,
                 count = 0;
             var timeID = setInterval(function(){
@@ -33,7 +33,7 @@ define(["ace/ace"] ,function(ace){
 
                 }
                 //插入一行后加入换行符
-                editor.insert(lines[count]+"\r\n");
+                editor.insert(lines[count]+"\n");
                 editor.focus();
                 count++;
             }, 80);
