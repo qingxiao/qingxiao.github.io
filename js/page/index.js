@@ -34,7 +34,6 @@ define(["ace/ace"] ,function(ace){
                 }
                 //插入一行后加入换行符
                 editor.insert(lines[count]+"\r\n");
-                editor.setHighlightActiveLine(true);
                 editor.focus();
                 count++;
             }, 80);
