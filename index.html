@@ -67,18 +67,32 @@ $ git checkout gh-pages
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
+<code>
+    {
+    "basicInfo": {
+    "name": "肖清",
+    "birth": "1988-07",
+    "sex": "male",
+    "email": "350932784@qq.com || 350932784@163.com",
+    "tel": 18608590721,
+    "exp": "2010-now"
+    },
 
-    
+    "developer": "Front End Engineer",
 
+    "skills": {
+    "language": "html, css, javascript, less, nodejs",
+    "library": "jquery, requirejs, backbone, bootstrap ...",
+    "software": "firework, webstrom, browser, firebug ...",
+    "vcs": "git, svn",
+    "other": "c++, java, ruby, php"
+    },
+    "education": {
+    "college": "湖南工程学院",
+    "professional": "信息与计算科学",
+    "date": "2006-09-01 to 2010-06-30"
+    }
+    }
+</code>
   </body>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
-  <!--<script src="http://cdn.socket.io/stable/socket.io.js"></script>-->
-<script>
- console.log(123);
-  var socket = io.connect('http://localhost:3000');
-  socket.on('news', function (data) {
-    console.log(data);
-    socket.emit('my other event', { my: 'data' });
-  });
-</script>
 </html>
