@@ -2,12 +2,247 @@
     display: none;
 }
 
-.main-content{}
-.main-content .resume-code{
+.main-content{
     width:1024px;
     margin:0 auto;
 }
-#editor {
-  height:500px;
+.main-content .resume-code{
+    height:500px;
+    width:600px;
+    background-color: transparent;
+    margin-top:35px;
+}
 
+.main-content .resume-code .ace_gutter{
+    background-color: transparent;
+}
+#mural #sky {
+    background-image: -moz-linear-gradient(center top , #06060a 0px, #1c1828 100%);
+    height: 90%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+#mural #landscape {
+    bottom: 0;
+    height: 700px;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+#mural #landscape #fuji {
+    background-image: url("../../img/page/index/fuji.png");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    bottom: 100px;
+    display: block;
+    height: 318px;
+    left: 0;
+    position: absolute;
+    width: 700px;
+    z-index: 2;
+}
+#mural #landscape #sun {
+    background-image: url("../../img/page/index/sun.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    bottom: 115px;
+    height: 120px;
+    position: absolute;
+    right: 25%;
+    width: 210px;
+    z-index: 0;
+}
+#mural #landscape #sun-reflection {
+    background-image: url("../../img/page/index/sun-reflect.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    bottom: 115px;
+    height: 30px;
+    opacity: 0.4;
+    position: absolute;
+    right: 25%;
+    width: 210px;
+    z-index: 1;
+}
+#mural #landscape #water {
+    background-image: -moz-linear-gradient(center top , #0d131e 0px, #05080f 100%);
+    border-top: 1px solid #282847;
+    bottom: 0;
+    height: 145px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+#mural #landscape #bonsai {
+    background-image: url("../../img/page/index/bonsai.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    bottom: 0;
+    height: 650px;
+    position: absolute;
+    right: 0;
+    width: 700px;
+    z-index: 4;
+}
+#mural #landscape #foliage1, #mural #landscape #foliage2, #mural #landscape #foliage3 {
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+#mural #landscape #foliage1, #mural #landscape #foliage2 {
+    background-image: url("../../img/page/index/foliage-small.png");
+    height: 115px;
+    transform: rotate(-180deg);
+    width: 247px;
+}
+#mural #landscape #foliage3 {
+    background-image: url("../../img/page/index/foliage-large.png");
+    height: 210px;
+    width: 385px;
+}
+#mural #landscape #foliage1 {
+    bottom: -55px;
+    left: -40px;
+    z-index: 3;
+}
+#mural #landscape #foliage2 {
+    bottom: -58px;
+    right: 540px;
+    z-index: 3;
+}
+#mural #landscape #foliage3 {
+    bottom: -100px;
+    right: 220px;
+    z-index: 2;
+}
+#mural #landscape #ground {
+    background-color: #03040a;
+    bottom: 0;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+}
+#mural #landscape #ground-surface {
+    background-color: transparent;
+    background-image: url("../../img/page/index/ground.png");
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    bottom: 50px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+}
+@media all and (max-width: 640px) {
+    #mural #landscape #fuji {
+        background-size: 80% auto;
+        bottom: 80px;
+    }
+    #mural #landscape #sun, #mural #landscape #sun-reflection, #mural #landscape #bonsai, #mural #landscape #foliage1, #mural #landscape #foliage2, #mural #landscape #foliage3, #mural #landscape #ground-surface {
+        background-size: 60% auto;
+    }
+    #mural #landscape #water {
+        height: 110px;
+    }
+    #mural #landscape #sun {
+        background-size: 40% auto;
+        bottom: 75px;
+    }
+    #mural #landscape #sun-reflection {
+        bottom: 85px;
+    }
+    #mural #landscape #foliage2 {
+        bottom: -58px;
+        right: 340px;
+    }
+    #mural #landscape #foliage3 {
+        bottom: -100px;
+        right: 90px;
+    }
+}
+@media all and (max-height: 640px) {
+    #mural #landscape #fuji {
+        background-size: 80% auto;
+        bottom: 80px;
+    }
+    #mural #landscape #sun, #mural #landscape #sun-reflection, #mural #landscape #bonsai, #mural #landscape #foliage1, #mural #landscape #foliage2, #mural #landscape #foliage3, #mural #landscape #ground-surface {
+        background-size: 60% auto;
+    }
+    #mural #landscape #water {
+        height: 110px;
+    }
+    #mural #landscape #sun {
+        background-size: 40% auto;
+        bottom: 75px;
+    }
+    #mural #landscape #sun-reflection {
+        bottom: 85px;
+    }
+    #mural #landscape #foliage2 {
+        bottom: -58px;
+        right: 340px;
+    }
+    #mural #landscape #foliage3 {
+        bottom: -100px;
+        right: 90px;
+    }
+}
+@media all and (max-width: 480px) {
+    #mural #landscape #fuji {
+        background-size: 40% auto;
+        bottom: 53px;
+    }
+    #mural #landscape #bonsai, #mural #landscape #foliage1, #mural #landscape #foliage2, #mural #landscape #foliage3, #mural #landscape #ground-surface {
+        background-size: 40% auto;
+    }
+    #mural #landscape #water {
+        height: 70px;
+    }
+    #mural #landscape #sun {
+        background-size: 30% auto;
+        bottom: 30px;
+    }
+    #mural #landscape #sun-reflection {
+        display: none;
+    }
+    #mural #landscape #foliage2 {
+        bottom: -58px;
+        right: 140px;
+    }
+    #mural #landscape #foliage3 {
+        bottom: -100px;
+        right: 0;
+    }
+}
+@media all and (max-height: 320px) {
+    #mural #landscape #fuji {
+        background-size: 40% auto;
+        bottom: 53px;
+    }
+    #mural #landscape #bonsai, #mural #landscape #foliage1, #mural #landscape #foliage2, #mural #landscape #foliage3, #mural #landscape #ground-surface {
+        background-size: 40% auto;
+    }
+    #mural #landscape #water {
+        height: 70px;
+    }
+    #mural #landscape #sun {
+        background-size: 30% auto;
+        bottom: 30px;
+    }
+    #mural #landscape #sun-reflection {
+        display: none;
+    }
+    #mural #landscape #foliage2 {
+        bottom: -58px;
+        right: 140px;
+    }
+    #mural #landscape #foliage3 {
+        bottom: -100px;
+        right: 0;
+    }
 }
