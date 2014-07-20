@@ -5,6 +5,8 @@
 .main-content{
     width:1024px;
     margin:0 auto;
+    z-index: 5;
+    position: relative;
 }
 .main-content .resume-code{
     height:500px;
@@ -15,6 +17,9 @@
 
 .main-content .resume-code .ace_gutter{
     background-color: transparent;
+}
+#mural{
+    z-index: 0;
 }
 #mural #sky {
     background-image: -moz-linear-gradient(center top , #06060a 0px, #1c1828 100%);
