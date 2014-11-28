@@ -5,6 +5,7 @@
 .main-content{
     width:1024px;
     margin:0 auto;
+    position: relative;
 }
 .main-content .resume-code{
     height:500px;
