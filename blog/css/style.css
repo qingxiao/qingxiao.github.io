@@ -524,4 +524,49 @@ td {
 .cf {
   *zoom: 1;
 }
+/* =============================================================================
+   Custom
+   ========================================================================== */
+@keyframes progress
+{
+    0% {width:0;display: block; }
+    99% {width: 100%;}
+    100% {display: none;}
+}
+@keyframes progress
+{
+    0% {width:0;display: block; }
+    99% {width: 100%;}
+    100% {display: none;}
+}
 
+@-moz-keyframes progress /* Firefox */
+{
+    0% {width:0;display: block; }
+    99% {width: 100%;}
+    100% {display: none;}
+}
+
+@-webkit-keyframes progress /* Safari 和 Chrome */
+{
+    0% {width:0;display: block; }
+    99% {width: 100%;}
+    100% {display: none;}
+}
+
+@-o-keyframes progress /* Opera */
+{
+    0% {width:0;display: block; }
+    99% {width: 100%;}
+    100% {display: none;}
+}
+.navbar .progress-bar{
+    position: absolute;
+    top:0;
+    height: 2px;
+    background-color: #ffff00;
+    animation: progress 3s;
+    -moz-animation:  progress 3s;	/* Firefox */
+    -webkit-animation:  progress 3s;	/* Safari 和 Chrome */
+    -o-animation:  progress 3s;	/* Opera */
+}
