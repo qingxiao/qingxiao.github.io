@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascript模块化开发 | QingXiao</title>
+  <title>多语言开发技术改善 | QingXiao</title>
   <meta name="author" content="John Doe">
   
-  <meta name="description" content="当多人合作开发同一个项目的时候，能和好的协作开发，运应而生了js模块化开发前端怎样来进行开发，AMD和CMD区别等，详细的查看ppt吧">
+  <meta name="description" content="前端开发中，会在html， js中使用一些默认语言的字符串，当项目需要多语言国际化：1 开发前明确需要多语言，把需要多语言的地方写上方法调用，然后把对应的key和value添加到语言配置文件2 开发完成后再提出需要多语言，手动查找需要多语言的字符串，替换成key，并提取出key和value添加到语言配置文件3 当html开发完成，嵌入到后端view层的时候，需要后端人员去处理后端的多语言
+遇到问题：1 需要人工手动检查重复字段；2 前后端分别处理而不能使用同一份配置文件；3 遇到上述方法2的时候，会消耗大量时间去完成功能；
+解决方案：">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="javascript模块化开发"/>
+  <meta property="og:title" content="多语言开发技术改善"/>
   <meta property="og:site_name" content="QingXiao"/>
 
   
@@ -88,7 +90,7 @@
 
 	
 		<div class="page-header">		
-			<h1> javascript模块化开发</h1>
+			<h1> 多语言开发技术改善</h1>
 		</div>		
 	
 
@@ -104,15 +106,12 @@
 
 	<!-- content -->
 	<div class="mypage">		
-	    <p>当多人合作开发同一个项目的时候，能和好的协作开发，运应而生了js模块化开发<br>前端怎样来进行开发，AMD和CMD区别等，详细的查看ppt吧<br><a id="more"></a></p>
-<p><div id="imgContainer"><br></div><br>下载：<br><a href="/blog/resource/javascript模块化开发/javascript模块开发.pdf" target="_blank">javascript模块化开发.pdf</a><br><a href="/blog/resource/javascript模块化开发/javascript模块开发.ppt" target="_blank">javascript模块化开发.ppt</a></p>
-<script>
-var imgs = '';
-for(var i=1;i<=15;i++){
-    imgs += '<img src="/blog/resource/javascript模块化开发/javascript模块开发/幻灯片'+ i +'.png"/><hr/>';
-}
-$('#imgContainer').html(imgs);
-</script>	  
+	    <p>前端开发中，会在html， js中使用一些默认语言的字符串，当项目需要多语言国际化：<br>1 开发前明确需要多语言，把需要多语言的地方写上方法调用，然后把对应的key和value添加到语言配置文件<br>2 开发完成后再提出需要多语言，手动查找需要多语言的字符串，替换成key，并提取出key和value添加到语言配置文件<br>3 当html开发完成，嵌入到后端view层的时候，需要后端人员去处理后端的多语言</p>
+<p>遇到问题：<br>1 需要人工手动检查重复字段；<br>2 前后端分别处理而不能使用同一份配置文件；<br>3 遇到上述方法2的时候，会消耗大量时间去完成功能；</p>
+<p>解决方案：<br><a id="more"></a><br>1、无论是js或者html还是后端view层，统一使用标示符 <strong>i18n</strong>(“name{0}”,[“param1”])<br>     参数1：string 默认显示的文本，作为默认语言<br>     参数2：array 文本中需要替换的对应的字段<br>2、使用前端自动化工具gulp来解析标识符，提取出第一个参数name生成默认的语言包：<br>     string.properties：<br>          name1=name1<br>          name2=name2<br>          …<br>     把该文件作为基础包，翻译出其他对应的语言包；<br>3、java后端有多语言jar包处理properties文件并传给模板使用，模板中把 <strong>i18n</strong>(…)调用后端模板方法处理多语言；<br>      前端使用ajax请求语言包，或者直接script标签引入语言包js，并解析成json格式供前端方法 <strong>i18n</strong>(…)直接调用；<br>4、如果key需要用英文加下划线，将提取出来的key通过调用百度翻译api转换成为英文，并将文件中对应的地方替换成为新的key</p>
+<p>使用插件：</p>
+<h3 id="gulp-tcl-i18n">gulp-tcl-i18n</h3>
+	  
 	</div>
 
 	<div>
@@ -120,14 +119,14 @@ $('#imgContainer').html(imgs);
 	<div class="pagination">
 <ul class="pagination">
 	 
-				
-    	<li class="prev"><a href="/blog/2015/04/20/多语言开发技术改善/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
-  		
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>上一页</a></li>
+        
 
         <li><a href="/blog/archives"><i class="fa fa-archive"></i>Archive</a></li>
 
 		
-		   <li class="next"><a href="/blog/2015/02/01/前端javascript规范/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+		   <li class="next"><a href="/blog/2015/03/01/javascript模块化开发/" class="alignright next">下一页<i class="fa fa-arrow-circle-o-right"></i></a></li>         
         
 	
 </ul>
@@ -142,7 +141,7 @@ $('#imgContainer').html(imgs);
   <h2 class="title">留言</h2>
 
   
-  	 <div class="ds-thread" data-title="javascript模块化开发"></div>  
+  	 <div class="ds-thread" data-title="多语言开发技术改善"></div>  
   
 </section>
 
@@ -156,7 +155,7 @@ $('#imgContainer').html(imgs);
 	
 	<div class="meta-widget">
 	<i class="fa fa-clock-o"></i>
-	Mar 1 2015 
+	Apr 20 2015 
 	</div>
 	
 
@@ -164,6 +163,14 @@ $('#imgContainer').html(imgs);
     
 
 	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/blog/tags/多语言/">多语言<span>1</span></a></li> <li><a href="/blog/tags/gulp插件/">gulp插件<span>1</span></a></li>
+    </ul>
+	</div>
 		
 
 	<!-- toc -->
