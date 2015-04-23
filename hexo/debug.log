@@ -1,0 +1,16 @@
+date: "2015-03-01 23:14:04.070"
+argv: "c:\\Program Files\\nodejs\\node.exe g:\\Users\\kyle\\AppData\\Roaming\\npm\\node_modules\\hexo\\bin\\hexo clean"
+os: Windows_NT 6.2.9200 win32 x64
+versions:
+  http_parser: "1.0"
+  node: 0.10.26
+  v8: 3.14.5.9
+  ares: 1.9.0-DEV
+  uv: 0.10.25
+  zlib: 1.2.3
+  modules: "11"
+  openssl: 1.0.1e
+  hexo: 2.8.3
+---
+[debug] 23:14:03.743 Config file loaded from f:\mywork\github\blog\_config.yml[debug] 23:14:03.745 Version info checked successfully[debug] 23:14:03.773 Loading database.[debug] 23:14:03.825 Processed: draft.md (1ms)[debug] 23:14:03.825 Processed: page.md (1ms)[debug] 23:14:03.831 Processed: photo.md (7ms)[debug] 23:14:03.831 Processed: post.md (7ms)[debug] 23:14:03.849 Plugin loaded successfully: hexo-renderer-ejs[debug] 23:14:03.865 Plugin loaded successfully: hexo-renderer-marked[debug] 23:14:04.029 Plugin loaded successfully: hexo-renderer-stylus[debug] 23:14:04.032 Plugin loaded successfully: hexo-tag-bootstrap[info] 23:14:04.034 Deleted cache file[error] 23:14:04.061 Error: EBUSY, rmdir 'f:\mywork\github\qingxiao.github.io\blog'
+Error: EBUSY, rmdir 'f:\mywork\github\qingxiao.github.io\blog'
