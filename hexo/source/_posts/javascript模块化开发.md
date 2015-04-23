@@ -1,6 +1,9 @@
 title: javascript模块化开发
 date: 2015-03-01 22:38:36
 tags:
+- javascript
+- 分享
+categories: ppt分享
 ---
 当多人合作开发同一个项目的时候，能和好的协作开发，运应而生了js模块化开发
 前端怎样来进行开发，AMD和CMD区别等，详细的查看ppt吧
