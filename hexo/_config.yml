@@ -42,7 +42,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: uncategorized
+default_category: abc
 category_map:
 tag_map:
 
@@ -87,8 +87,15 @@ exclude_generator:
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
+#deploy:
+#  type: git
+#  repo:
+#    github: https://github.com/qingxiao/qingxiao.github.io,master
 deploy:
-  type:
+  type: git
+  repo: https://github.com/qingxiao/qingxiao.github.io
+  branch: master
+#  message: [message]
 
 # =============================================================================
 # NexT Theme configuration
@@ -138,3 +145,4 @@ scheme: Mist
 # =============================================================================
 # End NexT Theme configuration
 # =============================================================================
+

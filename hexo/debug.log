@@ -1,5 +1,5 @@
-date: "2015-03-01 23:14:04.070"
-argv: "c:\\Program Files\\nodejs\\node.exe g:\\Users\\kyle\\AppData\\Roaming\\npm\\node_modules\\hexo\\bin\\hexo clean"
+date: "2015-04-26 00:43:33.483"
+argv: "node G:\\Users\\kyle\\AppData\\Roaming\\npm\\node_modules\\hexo\\bin\\hexo deploy"
 os: Windows_NT 6.2.9200 win32 x64
 versions:
   http_parser: "1.0"
@@ -12,5 +12,15 @@ versions:
   openssl: 1.0.1e
   hexo: 2.8.3
 ---
-[debug] 23:14:03.743 Config file loaded from f:\mywork\github\blog\_config.yml[debug] 23:14:03.745 Version info checked successfully[debug] 23:14:03.773 Loading database.[debug] 23:14:03.825 Processed: draft.md (1ms)[debug] 23:14:03.825 Processed: page.md (1ms)[debug] 23:14:03.831 Processed: photo.md (7ms)[debug] 23:14:03.831 Processed: post.md (7ms)[debug] 23:14:03.849 Plugin loaded successfully: hexo-renderer-ejs[debug] 23:14:03.865 Plugin loaded successfully: hexo-renderer-marked[debug] 23:14:04.029 Plugin loaded successfully: hexo-renderer-stylus[debug] 23:14:04.032 Plugin loaded successfully: hexo-tag-bootstrap[info] 23:14:04.034 Deleted cache file[error] 23:14:04.061 Error: EBUSY, rmdir 'f:\mywork\github\qingxiao.github.io\blog'
-Error: EBUSY, rmdir 'f:\mywork\github\qingxiao.github.io\blog'
+[debug] 00:43:32.996 Config file loaded from F:\mywork\github\qingxiao.github.io\hexo\_config.yml[debug] 00:43:32.999 Version info checked successfully[debug] 00:43:33.024 Loading database.[debug] 00:43:33.071 Processed: draft.md (2ms)[debug] 00:43:33.071 Processed: page.md (1ms)[debug] 00:43:33.075 Processed: post.md (5ms)[debug] 00:43:33.076 Processed: photo.md (6ms)[debug] 00:43:33.250 Plugin loaded successfully: hexo-deployer-git[debug] 00:43:33.266 Plugin loaded successfully: hexo-renderer-ejs[debug] 00:43:33.283 Plugin loaded successfully: hexo-renderer-marked[debug] 00:43:33.465 Plugin loaded successfully: hexo-renderer-stylus[debug] 00:43:33.470 Plugin loaded successfully: hexo-tag-bootstrap[info] 00:43:33.472 Start deploying: git[error] 00:43:33.473 TypeError: Arguments to path.join must be strings
+TypeError: Arguments to path.join must be strings
+    at f (path.js:204:15)
+    at Object.filter (native)
+    at Object.exports.join (path.js:209:40)
+    at Object.module.exports [as git] (F:\mywork\github\qingxiao.github.io\hexo\node_modules\hexo-deployer-git\lib\deployer.js:18:26)
+    at G:\Users\kyle\AppData\Roaming\npm\node_modules\hexo\lib\plugins\console\deploy.js:76:22
+    at iterate (G:\Users\kyle\AppData\Roaming\npm\node_modules\hexo\node_modules\async\lib\async.js:149:13)
+    at Object.async.eachSeries (G:\Users\kyle\AppData\Roaming\npm\node_modules\hexo\node_modules\async\lib\async.js:165:9)
+    at G:\Users\kyle\AppData\Roaming\npm\node_modules\hexo\lib\plugins\console\deploy.js:66:11
+    at G:\Users\kyle\AppData\Roaming\npm\node_modules\hexo\lib\plugins\console\deploy.js:32:27
+    at Object.cb [as oncomplete] (evalmachine.<anonymous>:168:19)
