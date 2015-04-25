@@ -43,11 +43,13 @@
   {% include '_scripts/helpers.swig' %}
   {% include '_scripts/motion.swig' %}
 
+
   {% block script_extra %}{% endblock %}
 
   {% include '_scripts/mathjax.swig' %}
   {% block comment_system %}{% endblock %}
 
+  {% include '_scripts/analytics/baidu-analytics.swig' %}
   {% include '_scripts/analytics/google-analytics.swig' %}
 </body>
 </html>
