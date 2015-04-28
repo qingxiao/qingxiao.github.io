@@ -74,6 +74,7 @@
         complete: function () {
           sidebar.addClass('sidebar-active');
           sidebar.trigger('sidebar.didShow');
+          $(".loading-mask").hide();
         }
       });
       sidebar.trigger('sidebar.isShowing');

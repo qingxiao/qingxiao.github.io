@@ -122,7 +122,5 @@
   {% include '_scripts/analytics/google-analytics.swig' %}
 
 </body>
-<script>
-    $(".loading-mask").hide();
-</script>
+
 </html>

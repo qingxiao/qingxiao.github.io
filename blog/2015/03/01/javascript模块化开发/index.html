@@ -569,6 +569,7 @@ clearInterval(timer);
         complete: function () {
           sidebar.addClass('sidebar-active');
           sidebar.trigger('sidebar.didShow');
+          $(".loading-mask").hide();
         }
       });
       sidebar.trigger('sidebar.isShowing');
@@ -987,7 +988,5 @@ clearInterval(timer);
   
 
 </body>
-<script>
-    $(".loading-mask").hide();
-</script>
+
 </html>
