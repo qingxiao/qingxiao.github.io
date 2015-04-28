@@ -542,7 +542,11 @@
 
       sidebarToggleLine1st.velocity(sidebarToggleLine1stStatusInit);
       sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
-      sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit);
+      sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit, {
+          complete: function () {
+              $(".loading-mask").hide();
+          }
+      });
 
       sidebar.removeClass('sidebar-active');
       sidebar.trigger('sidebar.isHiding');
