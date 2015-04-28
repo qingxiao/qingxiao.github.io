@@ -30,10 +30,79 @@
 
 
   <title> First Post // XiaoQing </title>
+    <style>
+        @-moz-keyframes rotate{
+            0%{ -moz-transform:rotate(0deg);}
+            100%{-moz-transform:rotate(-360deg);}
+        }
+        @-webkit-keyframes rotate{
+            0%{ -webkit-transform:rotate(0deg);}
+            100%{-webkit-transform:rotate(-360deg);}
+        }
+        .loading-mask{
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+
+        }
+        .loading-box{
+            width:200px;
+            height:200px;
+            position: fixed;
+            left:50%;
+            top:50%;
+            margin-left:-100px;
+            margin-top:-100px;
+        }
+        .quarter-circle{
+            border-color: transparent transparent #000 #ccc;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 5px;
+            padding:20px;
+            width:100%;
+            background-color: transparent;
+            height: 100%;
+            box-sizing: border-box;
+            -moz-animation:rotate 2s linear infinite;
+            -webkit-animation:rotate 2s linear infinite;
+            animation:rotate 2s linear infinite;
+
+        }
+        .circle-outer{
+            border-color:#FFFF00 #FF00FF transparent transparent;
+            -moz-animation-duration:2s;
+            -webkit-animation-duration:1s;
+            animation-duration:1s;
+        }
+        .circle-middle{
+            border-color: transparent #33FF66 #66FFFF transparent;
+            -moz-animation-duration:3s;
+            -webkit-animation-duration:2s;
+            animation-duration:2s;
+        }
+        .circle-inner{
+            border-color: transparent transparent #999900 #0099FF;
+            -moz-animation-duration:5s;
+            -webkit-animation-duration:3s;
+            animation-duration:3s;
+        }
+    </style>
 </head>
 
 <body>
   <div class="container one-column page-post-detail">
+      <div class="loading-mask">
+          <div class="loading-box">
+              <div class="quarter-circle circle-outer">
+                     <div class="quarter-circle circle-middle">
+                          <div class="quarter-circle circle-inner"></div>
+                      </div>
+              </div>
+          </div>
+      </div>
     <div class="headband"></div>
 
     <div id="header" class="header">
@@ -877,5 +946,9 @@
   </script>
 
   
+
 </body>
+<script>
+    $(".loading-mask").hide();
+</script>
 </html>
