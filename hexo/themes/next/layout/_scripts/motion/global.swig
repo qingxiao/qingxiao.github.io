@@ -54,7 +54,19 @@
       $('.menu-item').velocity('transition.slideDownIn', {
           display: null,
           complete : function () {
-             $(".loading-mask").hide(500);
+              var $mask = $('.loading-mask'),
+                   $out = $mask.find('.circle-outer'),
+                   $mid = $mask.find('.circle-middle'),
+                   $inner = $mask.find('.circle-inner');
+              var styles = {opacity:0, margin:'100%'};
+              var speed = 350;
+              $inner.animate(styles, speed, function(){
+                  $mid.animate(styles, speed, function(){
+                      $out.animate(styles, speed, function(){
+                          $mask.remove();
+                      });
+                  });
+              });
           }
       });
     }
