@@ -88,7 +88,7 @@
       sidebarToggleLine2nd.velocity(sidebarToggleLine2ndStatusInit);
       sidebarToggleLine3rd.velocity(sidebarToggleLine3rdStatusInit, {
           complete: function () {
-              $(".loading-mask").hide();
+
           }
       });
 
@@ -103,10 +103,13 @@
       );
     }
 
-    function postsListMotion () {
-      var postMotionOptions = window.postMotionOptions || {stagger: 300, drag: true};
-      $('.post').velocity('transition.slideDownIn', postMotionOptions);
-    }
+      function postsListMotion() {
+          var postMotionOptions = window.postMotionOptions || {stagger: 300, drag: true};
+          postMotionOptions.complete = function () {
+              $(".loading-mask").hide();
+          };
+          $('.post').velocity('transition.slideDownIn', postMotionOptions);
+      }
 
     function sidebatToggleMotion () {
       sidebarToggle.on('click', function () {
