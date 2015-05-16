@@ -18,7 +18,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="css,html," />
 
 
 
@@ -29,7 +29,7 @@
 
 
 
-  <title> 一点儿记录 // XiaoQing </title>
+  <title> 如何让2个并列的div自动等高（不设高度） // XiaoQing </title>
     <style>
         @-moz-keyframes rotate{
             0%{ -moz-transform:rotate(0deg);}
@@ -185,7 +185,7 @@
           
           
             
-              一点儿记录
+              如何让2个并列的div自动等高（不设高度）
             
           
         </h1>
@@ -193,17 +193,28 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2014-12-08
+          发表于 2015-05-16
         </span>
 
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/blog/categories/布局/">布局</a>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/blog/2014/12/08/publish-github/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/08/publish-github/"></span>
+            <a href="/blog/2015/05/16/如何让2个并列的div自动等高（不设高度）/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/16/如何让2个并列的div自动等高（不设高度）/"></span>
             </a>
           </span>
           
@@ -217,25 +228,34 @@
       
 
       
-        <p>将github主页修改成为blog，把之前的<a href="http://qingxiao.github.io/recommend/index.html" target="_blank" rel="external">主页</a>移动到另一个文件夹下</p>
+        <p>在做两栏布局的时候，左边往往是菜单，并且高度要和右边高度保持一致.<br>so,可以用以下3种方法:<br>1.背景模拟法（假高度），按照尺寸制作背景，平铺，当内容增多时，背景就会向下纵向重复，看起来就向左右两个div都自动向下延伸了一样。<br>2.表格嵌套法（不难理解，表格都是等高的，就是在div中嵌套表格）<br>3.内外补丁法（最推荐的方法，因为只用css实现的，但初学者不易理解）<br><a id="more"></a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">* <span class="rules">{ <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule"><span class="attribute">padding</span>:<span class="value"><span class="number">0</span></span></span>; <span class="rule">}</span></span></div><div class="line"><span class="id">#wrap</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">overflow</span>:<span class="value">hidden</span></span>; <span class="rule">(这行代码是重点，否则你会看到页面很长很长)</span></div><div class="line">    <span class="attribute">padding</span>:<span class="value"><span class="number">0</span></span>;</div><div class="line">    <span class="rule"><span class="attribute">padding-left</span>:<span class="value"><span class="number">180px</span></span></span>;<span class="rule">（内补丁）</span></div><div class="line">}</div><div class="line"><span class="id">#left</span>,<span class="id">#right</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value">auto</span></span>;</div><div class="line">    <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value">-<span class="number">10000px</span></span></span>;<span class="rule">（外补丁）</span></div><div class="line">    <span class="attribute">padding-bottom</span>:<span class="value"><span class="number">10000px</span></span>;<span class="rule">（内补丁）</span></div><div class="line">}</div><div class="line"><span class="id">#left</span> <span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">display</span>:<span class="value">inline</span></span>;</div><div class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value">left</span></span>;</div><div class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">180px</span></span></span>;</div><div class="line">    <span class="rule"><span class="attribute">margin-left</span>:<span class="value">-<span class="number">180px</span></span></span>;<span class="rule">（外补丁）</span></div><div class="line">    <span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#0CF</span></span>;</div><div class="line"><span class="rule">}</span></div><div class="line"><span class="id">#right</span><span class="rules">{</span></div><div class="line">    <span class="rule"><span class="attribute">float</span>:<span class="value">right</span></span>;</div><div class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">100%</span></span></span>;</div><div class="line">    <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#FC6</span></span></span>;</div><div class="line"><span class="rule">}</span></div></pre></td></tr></table></figure>
+
+<p>这里说一下内外补丁，其实也没那么难理解，我的理解就是相互抵消。多用用margin负值，你会了解这个原理的。</p>
 
       
     </div>
 
     <div class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/blog/tags/css/"> #css </a>
+          
+            <a href="/blog/tags/html/"> #html </a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2015/02/01/前端javascript规范/">前端javascript规范</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2014/11/30/First-Post/">First Post</a>
+              <a href="/blog/2015/05/16/宽度自适应三栏的布局方式-转/">宽度自适应三栏的布局方式（转）</a>
             
           </div>
         </div>
@@ -251,8 +271,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2014/12/08/publish-github/"
-               data-title="一点儿记录" data-url="http://yoursite.com/2014/12/08/publish-github/">
+          <div class="ds-thread" data-thread-key="2015/05/16/如何让2个并列的div自动等高（不设高度）/"
+               data-title="如何让2个并列的div自动等高（不设高度）" data-url="http://yoursite.com/2015/05/16/如何让2个并列的div自动等高（不设高度）/">
           </div>
         
       </div>

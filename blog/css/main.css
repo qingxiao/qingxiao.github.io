@@ -747,6 +747,7 @@ td {
   border: none;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .post .highlight table {
   margin: 0;
@@ -1170,7 +1171,7 @@ input.menu-search-input {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e022ff;
+  background: #52ff11;
 }
 .sidebar-nav {
   margin: 0;

@@ -18,7 +18,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="css,html," />
 
 
 
@@ -29,7 +29,7 @@
 
 
 
-  <title> 一点儿记录 // XiaoQing </title>
+  <title> 宽度自适应三栏的布局方式（转） // XiaoQing </title>
     <style>
         @-moz-keyframes rotate{
             0%{ -moz-transform:rotate(0deg);}
@@ -185,7 +185,7 @@
           
           
             
-              一点儿记录
+              宽度自适应三栏的布局方式（转）
             
           
         </h1>
@@ -193,17 +193,28 @@
 
       <div class="post-meta">
         <span class="post-time">
-          发表于 2014-12-08
+          发表于 2015-05-16
         </span>
 
+        
+          <span class="post-category">
+            &nbsp; | &nbsp; 分类于
+            
+              <a href="/blog/categories/布局/">布局</a>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/blog/2014/12/08/publish-github/#comments" >
-              <span class="post-comments-count ds-thread-count" data-thread-key="2014/12/08/publish-github/"></span>
+            <a href="/blog/2015/05/16/宽度自适应三栏的布局方式-转/#comments" >
+              <span class="post-comments-count ds-thread-count" data-thread-key="2015/05/16/宽度自适应三栏的布局方式-转/"></span>
             </a>
           </span>
           
@@ -217,25 +228,46 @@
       
 
       
-        <p>将github主页修改成为blog，把之前的<a href="http://qingxiao.github.io/recommend/index.html" target="_blank" rel="external">主页</a>移动到另一个文件夹下</p>
+        <p>三种方法：<br>1.绝对定位法（最易理解）<br>2.margin负值法（不易理解）<br>3.浮动法（最常见）<br><a id="more"></a></p>
+<p><hr></p>
+<h3 id="1-绝对定位法（最易理解）">1.绝对定位法（最易理解）</h3>
+<p>左右两栏采用绝对定位，分别固定于页面的左右两侧，中间的主体栏用左右margin值撑开距离。于是实现了三栏自适应布局。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">html,body{margin:<span class="number">0</span>; height:<span class="number">100</span>%;}</div><div class="line"><span class="comment">#left,#right{position:absolute; top:0; width:200px; height:100%;}</span></div><div class="line"><span class="comment">#left{left:0; background:#a0b3d6;}</span></div><div class="line"><span class="comment">#right{right:0; background:#a0b3d6;}</span></div><div class="line"><span class="comment">#main{margin:0 210px; background:#ffe6b8; height:100%;}</span></div><div class="line"></div><div class="line">&lt;<span class="keyword">div</span> <span class="property">id</span>=”left”&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;<span class="keyword">div</span> <span class="property">id</span>=”main”&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;<span class="keyword">div</span> <span class="property">id</span>=”right”&gt;&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+
+<h3 id="2-margin负值法（不易理解）">2.margin负值法（不易理解）</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">html,body{margin:<span class="number">0</span>; height:<span class="number">100</span>%;}</div><div class="line"><span class="comment">#main{width:100%; height:100%; float:left;}</span></div><div class="line"><span class="comment">#main #body{margin:0 210px; background:#ffe6b8; height:100%;}</span></div><div class="line"><span class="comment">#left,#right{width:200px; height:100%; float:left; background:#a0b3d6;}</span></div><div class="line"><span class="comment">#left{margin-left:-100%;}</span></div><div class="line"><span class="comment">#right{margin-left:-200px;}</span></div><div class="line"></div><div class="line">&lt;<span class="keyword">div</span> <span class="property">id</span>=”main”&gt;</div><div class="line">    &lt;<span class="keyword">div</span> <span class="property">id</span>=”body”&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;<span class="keyword">div</span> <span class="property">id</span>=”left”&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;<span class="keyword">div</span> <span class="property">id</span>=”right”&gt;&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+
+<p>重点是第一个div是中间的main，且必须套一个容器。</p>
+<h3 id="3-浮动法（最常见）">3.浮动法（最常见）</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">html,body{margin:<span class="number">0</span>; height:<span class="number">100</span>%;}</div><div class="line"><span class="comment">#main{height:100%; margin:0 210px; background:#ffe6b8;}</span></div><div class="line"><span class="comment">#left,#right{width:200px; height:100%; background:#a0b3d6;}</span></div><div class="line"><span class="comment">#left{float:left;}</span></div><div class="line"><span class="comment">#right{float:right;}</span></div><div class="line"></div><div class="line">&lt;<span class="keyword">div</span> <span class="property">id</span>=”left”&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;<span class="keyword">div</span> <span class="property">id</span>=”right”&gt;&lt;/<span class="keyword">div</span>&gt;</div><div class="line">&lt;<span class="keyword">div</span> <span class="property">id</span>=”main”&gt;&lt;/<span class="keyword">div</span>&gt;</div></pre></td></tr></table></figure>
+
+<p>重点是中间的main要放在标签最后，缺点是需要用clear:both</p>
 
       
     </div>
 
     <div class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/blog/tags/css/"> #css </a>
+          
+            <a href="/blog/tags/html/"> #html </a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/blog/2015/02/01/前端javascript规范/">前端javascript规范</a>
+              <a href="/blog/2015/05/16/如何让2个并列的div自动等高（不设高度）/">如何让2个并列的div自动等高（不设高度）</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/2014/11/30/First-Post/">First Post</a>
+              <a href="/blog/2015/04/20/多语言开发技术改善/">多语言开发技术改善</a>
             
           </div>
         </div>
@@ -251,8 +283,8 @@
     
       <div class="comments" id="comments">
         
-          <div class="ds-thread" data-thread-key="2014/12/08/publish-github/"
-               data-title="一点儿记录" data-url="http://yoursite.com/2014/12/08/publish-github/">
+          <div class="ds-thread" data-thread-key="2015/05/16/宽度自适应三栏的布局方式-转/"
+               data-title="宽度自适应三栏的布局方式（转）" data-url="http://yoursite.com/2015/05/16/宽度自适应三栏的布局方式-转/">
           </div>
         
       </div>
@@ -350,7 +382,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-绝对定位法（最易理解）"><span class="nav-number">1.</span> <span class="nav-text">1.绝对定位法（最易理解）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-margin负值法（不易理解）"><span class="nav-number">2.</span> <span class="nav-text">2.margin负值法（不易理解）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-浮动法（最常见）"><span class="nav-number">3.</span> <span class="nav-text">3.浮动法（最常见）</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
