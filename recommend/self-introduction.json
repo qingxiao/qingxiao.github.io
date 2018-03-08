@@ -7,12 +7,17 @@
         "tel": 18608590721,
         "exp": "2010-now"
     },
-
+    "company":[
+        "喜马拉雅fm",
+        "tcl通讯",
+        "重庆猪八戒网络有限公司",
+        "美团点评"
+    ]
     "developer": "Front End Engineer",
 
     "skills": {
         "language": "html, css, javascript, less, nodejs",
-        "library": "jquery, requirejs, backbone, bootstrap ...",
+        "library": "React, koa, express, jquery, requirejs, backbone, bootstrap ...",
         "software": "firework, webstrom, browser, firebug ...",
         "vcs": "git, svn",
         "other": "c++, java, ruby, php"
